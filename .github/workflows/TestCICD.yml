@@ -1,0 +1,26 @@
+# Test what is GitHub actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  installing:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: install nodejs
+      run: npm install
+      
+  testing:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: test nodejs
+      run: npm test
